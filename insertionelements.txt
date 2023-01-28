@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10] = {1, 2, 3, 4, 5};
+    int n = 5; // current number of elements in the array
+    int index, element, i;
+
+    printf("Original array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\nEnter the index where the element should be inserted: ");
+    scanf("%d", &index);
+
+    printf("Enter the element to be inserted: ");
+    scanf("%d", &element);
+
+    // Shift elements to the right of the specified index
+    for (i = n; i > index; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    // Insert the element at the specified index
+    arr[index] = element;
+    n++;
+
+    printf("\nArray after insertion: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
