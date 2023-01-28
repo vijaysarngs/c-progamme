@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int n,mod,m,i;
+    printf("enter the size:");
+    scanf("%d",&m);
+    printf("enter the number:");
+    scanf("%d",&n);
+
+    for(i=0;i<m;i++){
+        mod=n%10;
+        n=n/10;
+        printf("%d",mod);
+    }
+}

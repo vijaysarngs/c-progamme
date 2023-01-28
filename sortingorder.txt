@@ -1,0 +1,24 @@
+#include<stdio.h>
+void swap(int arr[10],int n){
+    int i,j,m_idx,temp;
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(arr[j]<arr[m_idx]){
+                m_idx=j;
+            }
+        }
+        temp=arr[m_idx];
+        arr[m_idx]=arr[i];
+        arr[i]=temp;
+    }
+}
+int main(){
+    int arr[]={2,6,1,4,8,6};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    swap(arr,n);
+    printf("the ordered array");
+    for(int i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
